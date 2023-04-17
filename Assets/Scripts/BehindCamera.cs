@@ -8,7 +8,7 @@ public class BehindCamera : MonoBehaviour
     public Transform originObject;
     public Transform lookingCameraTransform;
     [Range(0f, 1f)]
-    public float sensitivity = 0.4f;
+    public float sensitivity = 0.2f;
     Vector3 forwardVectorTowardsCamera;
     bool cameraLooking;
     float dotProductResult;
@@ -20,7 +20,6 @@ public class BehindCamera : MonoBehaviour
     // Constantly check if the camera is looking at the object
     void Update()
     {
-
         CheckIfCameraIsLooking();
     }
 
@@ -65,9 +64,7 @@ public class BehindCamera : MonoBehaviour
     // When the player starts looking at the object
     void StartLooking()
     {
-        Debug.Log("Camera starts looking");
         Looking = true;
-
     }
 
 
@@ -82,7 +79,6 @@ public class BehindCamera : MonoBehaviour
     // Controlling what to do if the player is not viewing the object
     void NotLooking()
     {
-        Debug.Log("Camera stops looking");
         Looking = false;
     }
 
