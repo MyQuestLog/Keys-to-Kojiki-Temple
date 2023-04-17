@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Locks Cursor to screen
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
