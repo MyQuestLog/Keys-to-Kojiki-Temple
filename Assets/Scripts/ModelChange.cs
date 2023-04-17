@@ -8,7 +8,7 @@ public class ModelChange : MonoBehaviour
     [SerializeField] private MeshFilter modelToChange;
     [SerializeField] private Mesh modelToUse;
 
-    private float targetTime = 20.0f;
+    private float targetTime = 10.0f;
     private bool Timer = false;
 
     // Functions determining if the player is viewing the object
