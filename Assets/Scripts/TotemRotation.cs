@@ -8,16 +8,20 @@ public class TotemRotation : MonoBehaviour
     private bool _canRotate;
 
     //Checks which face is currently at the front
-    private float _currentface;
+    [SerializeField] private float _currentFace;
 
     //Is the face that should be the correct one at the front
-    [SerializeField] private float _correctface;
+    [SerializeField] private float _correctFace;
+
+    //Send out number
+    [HideInInspector] public static float _totemCorrect;
 
 
 
     void Start()
     {
-        _currentface = 0;
+        _currentFace = 1;
+        _totemCorrect = 0;
     }
 
     
@@ -36,6 +40,21 @@ public class TotemRotation : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
             _canRotate = true;
+            _currentFace += 1;
+        }
+
+        if (_currentFace > 4)
+        {
+            _currentFace = 1;
+        }
+
+        if (_currentFace == _correctFace)
+        {
+            _totemCorrect = 1;
+        }
+        else if (_currentFace != _correctFace)
+        {
+            _totemCorrect = 0;
         }
 
     }
