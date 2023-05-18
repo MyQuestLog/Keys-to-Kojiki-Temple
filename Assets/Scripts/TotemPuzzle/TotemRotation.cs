@@ -32,7 +32,6 @@ public class TotemRotation : MonoBehaviour
         if (_canRotate)
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
-            
         }
 
 

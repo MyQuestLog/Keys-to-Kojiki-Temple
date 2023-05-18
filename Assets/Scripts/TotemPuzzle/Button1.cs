@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Totem1 : MonoBehaviour, IInteractable
+public class Button1 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
 
@@ -10,7 +10,7 @@ public class Totem1 : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Rotating Totem");
+        Debug.Log("Rotate");
         return true;
     }
 }
