@@ -22,25 +22,40 @@ public class TotemRotation : MonoBehaviour
     {
         _currentFace = 1;
         _totemCorrect = 0;
+
+        _canRotate = true;
+
     }
 
-    
+    /*
     void Update()
     {
+        RotateObject();
 
+
+    }*/
+
+    public void RotateObject()
+    {
         //If rotate is started rotate 90 degrees
+
+        Debug.Log("RotateObject");
         if (_canRotate)
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
+
+
+            _canRotate = true;
+            _currentFace += 1;
         }
 
 
         //On Keypress start rotation script
-        if (Input.GetKeyDown("f"))
-        {
-            _canRotate = true;
-            _currentFace += 1;
-        }
+    //    if (Input.GetKeyDown("f"))
+  //      {
+  //          _canRotate = true;
+       //     _currentFace += 1;
+  //      }
 
         if (_currentFace > 4)
         {
@@ -55,7 +70,6 @@ public class TotemRotation : MonoBehaviour
         {
             _totemCorrect = 0;
         }
-
     }
 
     //If object is not done rotating dont let the rotate be pressed again
