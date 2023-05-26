@@ -8,13 +8,16 @@ public class Button1 : MonoBehaviour, IInteractable
 
     public string InteractionPrompt => _prompt;
 
+    //Create a reference to game object totem
+    [SerializeField] GameObject totem;
+
+
+
 
     public bool Interact(Interactor interactor)
     {
-        //Call Own script
-        //otherObject.GetComponent<TotemRotation>().RotateObject();
-       
-        Debug.Log("Rotate");
+        //Call StartRotation method inside of TotemRotation
+        totem.GetComponent<TotemRotation>().StartRotation();
         return true;
 
     } 

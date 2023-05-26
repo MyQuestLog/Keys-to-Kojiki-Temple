@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using static TotemRotation;
 using UnityEngine;
+using static TotemRotation;
 
 public class TotemCode : MonoBehaviour
 {
@@ -11,6 +11,6 @@ public class TotemCode : MonoBehaviour
     void Update()
     {
         _totalFaces = _totemCorrect;
-        
+
     }
 }
