@@ -14,14 +14,14 @@ public class TotemRotation : MonoBehaviour
     [SerializeField] private float _correctFace;
 
     //Send out number
-    [HideInInspector] public static float _totemCorrect;
+    [HideInInspector] public static bool _totemCorrect;
 
 
 
     void Start()
     {
         _currentFace = 1;
-        _totemCorrect = 0;
+        _totemCorrect = false;
     }
 
     
@@ -38,13 +38,13 @@ public class TotemRotation : MonoBehaviour
             _currentFace = 1;
         }
 
-        if (_currentFace == _currentFace)
+        if (_currentFace == _correctFace)
         {
-            _totemCorrect = 1;
+            _totemCorrect = true;
         }
-        else if (_currentFace != _currentFace)
+        else if (_currentFace != _correctFace)
         {
-            _totemCorrect = 0;
+            _totemCorrect = false;
         }
 
     }
