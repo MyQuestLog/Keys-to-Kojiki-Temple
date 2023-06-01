@@ -18,7 +18,8 @@ public class Button3 : MonoBehaviour, IInteractable
     {
         _button3 = false;
     }
-    void Update()
+
+    public void SetVaraible()
     {
         //Check if face correct
         if (_totemCorrect == true)
@@ -32,18 +33,9 @@ public class Button3 : MonoBehaviour, IInteractable
             Debug.Log("_button3 = false");
         }
     }
+
     public bool Interact(Interactor interactor)
     {
-        //Check if face correct
-        if (_totemCorrect == true)
-        {
-            _button3 = true;
-            Debug.Log("_button3 = true");
-        }
-        else
-        {
-            _button3 = false;
-        }
 
         //Call StartRotation method inside of TotemRotation
         totem.GetComponent<TotemRotation>().StartRotation();

@@ -19,7 +19,7 @@ public class Button1 : MonoBehaviour, IInteractable
         _button1 = false;
     }
 
-    void Update()
+    public void SetVaraible()
     {
         //Check if face correct
         if (_totemCorrect == true)

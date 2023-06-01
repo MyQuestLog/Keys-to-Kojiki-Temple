@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Button1;
+using static Button2;
+using static Button3;
 
 public class TotemRotation : MonoBehaviour
 {
@@ -16,6 +19,10 @@ public class TotemRotation : MonoBehaviour
     //Send out number
     [HideInInspector] public static bool _totemCorrect;
 
+    [SerializeField] GameObject button;
+    [SerializeField] GameObject button1;
+    [SerializeField] GameObject button2;
+
 
 
     void Start()
@@ -27,31 +34,39 @@ public class TotemRotation : MonoBehaviour
     
     void Update()
     {
+
         if (_canRotate)
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
 
         }
+    }
+    
+    void EndRotation()
+    {
+        
         if (_currentFace > 4)
         {
-            Debug.Log("Reset to starting location");
+            //Debug.Log("Reset to starting location");
             _currentFace = 1;
         }
 
         if (_currentFace == _correctFace)
         {
             _totemCorrect = true;
+            button.GetComponent<Button1>().SetVaraible();
+           
         }
         else if (_currentFace != _correctFace)
         {
             _totemCorrect = false;
+            button.GetComponent<Button1>().SetVaraible();
         }
-
     }
 
     public void StartRotation()
     {
-        Debug.Log("Start rotating object");
+        //Debug.Log("Start rotating object");
         _canRotate = true;
         _currentFace += 1;
     }
@@ -75,9 +90,16 @@ public class TotemRotation : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
+        //Do EndRotation in Button1
+        //button.GetComponent<Button1>().EndRotation();
         transform.rotation = to;
         _canRotate = false;
-        Debug.Log("Stop rotating object");
+        EndRotation();
+
+        
+        //Debug.Log("Stop rotating object");
+
+        
     }
 }
 
