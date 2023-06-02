@@ -16,7 +16,7 @@ public class DoorMovement : MonoBehaviour
     {
         if (_puzzleCorrect == true)
         {
-            transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+            transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
         }
     }
 }
