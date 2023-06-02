@@ -10,7 +10,7 @@ public class TotemCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //     _totalFaces = _totemCorrect;
+        _totalFaces = _totemCorrect;
 
     }
 }
