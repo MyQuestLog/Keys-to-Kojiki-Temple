@@ -38,11 +38,11 @@ public class TotemRotation : MonoBehaviour
             _currentFace = 1;
         }
 
-        if (_currentFace == _currentFace)
+        if (_currentFace == _totemCorrect)
         {
             _totemCorrect = 1;
         }
-        else if (_currentFace != _currentFace)
+        else if (_currentFace != _totemCorrect)
         {
             _totemCorrect = 0;
         }
