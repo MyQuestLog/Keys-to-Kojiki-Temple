@@ -22,7 +22,7 @@ public class TotemFace3 : MonoBehaviour
     void Start()
     {
         _currentFace = 1;
-        _totemCorrect3 = false;
+        EndRotation();
     }
 
 
