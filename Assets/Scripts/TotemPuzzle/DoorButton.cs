@@ -17,6 +17,7 @@ public class DoorButton : MonoBehaviour, IInteractable
     //Create a reference to game object totem
     [SerializeField] GameObject door;
 
+    //pls fix
     void Start()
     {
         _puzzleCorrect = false;
