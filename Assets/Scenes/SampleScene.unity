@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 82354644}
   - component: {fileID: 82354648}
   m_Layer: 6
-  m_Name: Button 2
+  m_Name: Button2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,6 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentFace: 1
   _correctFace: 4
+  button: {fileID: 1567815441}
 --- !u!65 &325057083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -703,6 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentFace: 1
   _correctFace: 2
+  button: {fileID: 118863516}
 --- !u!65 &1011924746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -953,11 +955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1862562996387945383, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017659863
+      value: 0.000000017659854
       objectReference: {fileID: 0}
     - target: {fileID: 1862562996387945383, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016409469
+      value: -0.0000000016409462
       objectReference: {fileID: 0}
     - target: {fileID: 6396527668122391158, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,11 +983,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6396527668122391158, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017091043
+      value: -0.000000017091043
       objectReference: {fileID: 0}
     - target: {fileID: 6396527668122391158, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000019889257
+      value: 0.0000000019889257
       objectReference: {fileID: 0}
     - target: {fileID: 7386785036128526123, guid: b5053e81e484c5141bfb29df8105c78d, type: 3}
       propertyPath: m_LookAt
@@ -1177,7 +1179,7 @@ GameObject:
   - component: {fileID: 1567815442}
   - component: {fileID: 1567815446}
   m_Layer: 6
-  m_Name: Button 3
+  m_Name: Button3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,6 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentFace: 1
   _correctFace: 3
+  button: {fileID: 82354643}
 --- !u!65 &1735750500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1564,11 +1567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6085322586013121473, guid: 989d43713624a534dbabbc79497400ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000034182086
+      value: -0.000000034182086
       objectReference: {fileID: 0}
     - target: {fileID: 6085322586013121473, guid: 989d43713624a534dbabbc79497400ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000039778514
+      value: 0.0000000039778514
       objectReference: {fileID: 0}
     - target: {fileID: 6085322586013121473, guid: 989d43713624a534dbabbc79497400ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

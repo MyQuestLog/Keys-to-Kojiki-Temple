@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Button1;
 
 
-public class TotemRotation : MonoBehaviour
+public class TotemFace1 : MonoBehaviour
 {
     //Sets if the object can rotate or not
     private bool _canRotate;
@@ -18,14 +19,14 @@ public class TotemRotation : MonoBehaviour
     [HideInInspector] public static bool _totemCorrect;
 
     [SerializeField] GameObject button;
-   
+
     void Start()
     {
         _currentFace = 1;
         _totemCorrect = false;
     }
 
-    
+
     void Update()
     {
 
@@ -35,10 +36,10 @@ public class TotemRotation : MonoBehaviour
 
         }
     }
-    
+
     void EndRotation()
     {
-        
+
         if (_currentFace > 4)
         {
             Debug.Log("Reset to starting location");
@@ -48,13 +49,14 @@ public class TotemRotation : MonoBehaviour
         if (_currentFace == _correctFace)
         {
             _totemCorrect = true;
-            
-           
+            button.GetComponent<Button1>().SetVariable();
+
+
         }
         else if (_currentFace != _correctFace)
         {
             _totemCorrect = false;
-            
+            button.GetComponent<Button1>().SetVariable();
         }
     }
 
@@ -77,8 +79,8 @@ public class TotemRotation : MonoBehaviour
         float elapsed = 0.0f;
 
 
-        
-        while(elapsed < duration && _canRotate)
+
+        while (elapsed < duration && _canRotate)
         {
             transform.rotation = Quaternion.Slerp(from, to, elapsed / duration);
             elapsed += Time.deltaTime;
@@ -90,10 +92,10 @@ public class TotemRotation : MonoBehaviour
         _canRotate = false;
         EndRotation();
 
-        
+
         //Debug.Log("Stop rotating object");
 
-        
+
     }
 }
 
