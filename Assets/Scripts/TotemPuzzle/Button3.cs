@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TotemRotation;
+//using static TotemRotation;
+using static TotemFace3;
 
 public class Button3 : MonoBehaviour, IInteractable
 {
@@ -16,13 +17,13 @@ public class Button3 : MonoBehaviour, IInteractable
 
     void Start()
     {
-        _button3 = false;
+        SetVariable();
     }
 
-    public void SetVaraible()
+    public void SetVariable()
     {
         //Check if face correct
-        if (_totemCorrect == true)
+        if (_totemCorrect3 == true)
         {
             _button3 = true;
             Debug.Log("_button3 = true");
@@ -38,8 +39,9 @@ public class Button3 : MonoBehaviour, IInteractable
     {
 
         //Call StartRotation method inside of TotemRotation
-        totem.GetComponent<TotemRotation>().StartRotation();
+        totem.GetComponent<TotemFace3>().StartRotation();
         return true;
 
     }
+    //Fix
 }

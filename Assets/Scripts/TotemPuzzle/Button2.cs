@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TotemRotation;
-
+//using static TotemRotation;
+using static TotemFace2;
 public class Button2 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
@@ -16,13 +16,19 @@ public class Button2 : MonoBehaviour, IInteractable
 
     void Start()
     {
-        _button2 = false;
+        SetVariable();
     }
 
-    public void SetVaraible()
+    void Update()
+    {
+
+    }
+
+
+    public void SetVariable()
     {
         //Check if face correct
-        if (_totemCorrect == true)
+        if (_totemCorrect2 == true)
         {
             _button2 = true;
             Debug.Log("_button2 = true");
@@ -34,12 +40,14 @@ public class Button2 : MonoBehaviour, IInteractable
         }
     }
 
+
     public bool Interact(Interactor interactor)
     {
 
         //Call StartRotation method inside of TotemRotation
-        totem.GetComponent<TotemRotation>().StartRotation();
+        totem.GetComponent<TotemFace2>().StartRotation();
         return true;
 
     }
+    //Fix
 }

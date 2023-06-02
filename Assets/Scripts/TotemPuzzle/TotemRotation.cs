@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Button1;
-using static Button2;
-using static Button3;
 
 public class TotemRotation : MonoBehaviour
 {
@@ -17,56 +14,44 @@ public class TotemRotation : MonoBehaviour
     [SerializeField] private float _correctFace;
 
     //Send out number
-    [HideInInspector] public static bool _totemCorrect;
-
-    [SerializeField] GameObject button;
-    [SerializeField] GameObject button1;
-    [SerializeField] GameObject button2;
+    [HideInInspector] public static float _totemCorrect;
 
 
 
     void Start()
     {
         _currentFace = 1;
-        _totemCorrect = false;
+        _totemCorrect = 0;
     }
 
     
     void Update()
     {
-
         if (_canRotate)
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
 
         }
-    }
-    
-    void EndRotation()
-    {
-        
         if (_currentFace > 4)
         {
-            //Debug.Log("Reset to starting location");
+            Debug.Log("Reset to starting location");
             _currentFace = 1;
         }
 
-        if (_currentFace == _correctFace)
+        if (_currentFace == _totemCorrect)
         {
-            _totemCorrect = true;
-            button.GetComponent<Button1>().SetVaraible();
-           
+            _totemCorrect = 1;
         }
-        else if (_currentFace != _correctFace)
+        else if (_currentFace != _totemCorrect)
         {
-            _totemCorrect = false;
-            button.GetComponent<Button1>().SetVaraible();
+            _totemCorrect = 0;
         }
+
     }
 
     public void StartRotation()
     {
-        //Debug.Log("Start rotating object");
+        Debug.Log("Start rotating object");
         _canRotate = true;
         _currentFace += 1;
     }
@@ -90,16 +75,9 @@ public class TotemRotation : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        //Do EndRotation in Button1
-        //button.GetComponent<Button1>().EndRotation();
         transform.rotation = to;
         _canRotate = false;
-        EndRotation();
-
-        
-        //Debug.Log("Stop rotating object");
-
-        
+        Debug.Log("Stop rotating object");
     }
 }
 
