@@ -14,6 +14,9 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         // Locks Cursor to screen
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
+
+        
+       
     }
 }

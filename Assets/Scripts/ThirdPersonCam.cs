@@ -15,7 +15,7 @@ public class ThirdPersonCam : MonoBehaviour
     private void Start()
     {
         // makes cursor invisible
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
