@@ -8,6 +8,8 @@ public class StatueViewScript : MonoBehaviour, IInteractable
 
     [SerializeField] GameObject Canvas;
     private bool _view;
+    [SerializeField] private string _prompt;
+    public string InteractionPrompt => _prompt;
 
 
     // Start is called before the first frame update
@@ -34,11 +36,14 @@ public class StatueViewScript : MonoBehaviour, IInteractable
         if (_view == false)
         {
             _view = true;
+            Time.timeScale = 0f;
         }
         else
         {
             _view = false;
+            Time.timeScale = 1f;
         }
+        return true;
 
     }
 }
