@@ -10,6 +10,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    Animator animator;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -20,6 +21,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+
+    void Start()
+    {
+        animator = gameObject.GetComponentInChildren<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +44,24 @@ public class ThirdPersonMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetBool("IsIdle", false);
+            animator.SetBool("IsRunning", false);
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
+            {
+                animator.SetBool("IsIdle", false);
+                animator.SetBool("IsRunning", true);
+                animator.SetBool("IsJumping", false);
+            }
+            else
+            {
+                animator.SetBool("IsIdle", true);
+                animator.SetBool("IsRunning", false);
+                animator.SetBool("IsJumping", false);
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
