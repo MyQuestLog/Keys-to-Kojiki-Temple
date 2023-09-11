@@ -7,7 +7,7 @@ public class InteractionPromptUI : MonoBehaviour
 {
 
     private Camera _mainCam;
-    public bool isDisplayed = false;
+    
     [SerializeField] private GameObject _uiPanel;
     [SerializeField] private TextMeshProUGUI _promptText;
 
@@ -24,7 +24,8 @@ public class InteractionPromptUI : MonoBehaviour
         transform.LookAt(transform.position + rotation * Vector3.forward, worldUp: rotation * Vector3.up);
     }
 
-    
+    public bool isDisplayed = false;
+
     public void SetUp(string promptText)
     {
         _promptText.text = promptText;
@@ -33,8 +34,7 @@ public class InteractionPromptUI : MonoBehaviour
     }
     public void Close()
     {
-       _uiPanel.SetActive(false);
+        _uiPanel.SetActive(false);
         isDisplayed = false;
-
     }
 }
