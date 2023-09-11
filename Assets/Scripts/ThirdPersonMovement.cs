@@ -25,6 +25,8 @@ public class ThirdPersonMovement : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponentInChildren<Animator>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
