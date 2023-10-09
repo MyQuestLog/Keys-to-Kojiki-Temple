@@ -10,6 +10,7 @@ public class InteractionPromptUI : MonoBehaviour
     
     [SerializeField] private GameObject _uiPanel;
     [SerializeField] private TextMeshProUGUI _promptText;
+    public bool isDisplayed = false;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class InteractionPromptUI : MonoBehaviour
         transform.LookAt(transform.position + rotation * Vector3.forward, worldUp: rotation * Vector3.up);
     }
 
-    public bool isDisplayed = false;
+    
 
     public void SetUp(string promptText)
     {

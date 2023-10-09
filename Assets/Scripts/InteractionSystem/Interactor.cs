@@ -10,6 +10,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private InteractionPromptUI _interactionPromptUI;
 
+
     private readonly Collider[] _colliders = new Collider[3];
     [SerializeField] private int _numFound;
 
@@ -27,13 +28,18 @@ public class Interactor : MonoBehaviour
             {
                 if (!_interactionPromptUI.isDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt);
 
+                
+
                 if (Keyboard.current.eKey.wasPressedThisFrame) _interactable.Interact(interactor:this) ;
             }
         }
         else
         {
             if (_interactable != null) _interactable = null;
+
             if (_interactionPromptUI.isDisplayed) _interactionPromptUI.Close();
+
+            
         }
     }
 
