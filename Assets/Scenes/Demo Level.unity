@@ -14815,6 +14815,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 270.01978
       objectReference: {fileID: 0}
+    - target: {fileID: 7302872081973596936, guid: ef1387f075673f84e8c132a2d3b5857f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7521486608244466301, guid: ef1387f075673f84e8c132a2d3b5857f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 270.01978
@@ -14837,6 +14841,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef1387f075673f84e8c132a2d3b5857f, type: 3}
+--- !u!1 &1916173751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302872081973596936, guid: ef1387f075673f84e8c132a2d3b5857f, type: 3}
+  m_PrefabInstance: {fileID: 1916173750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1916173752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916173751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13701cc54e438294089b46bc294dec81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialoguePrompt: Open de door
 --- !u!1001 &1919007773
 PrefabInstance:
   m_ObjectHideFlags: 0
