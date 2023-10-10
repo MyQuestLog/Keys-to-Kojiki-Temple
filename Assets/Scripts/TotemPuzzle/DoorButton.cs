@@ -27,7 +27,7 @@ public class DoorButton : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         //Check if all faces are correct
-        if (_button1 == true && _button2 == true && _button3 == true)
+        if (_button1 == true) //&& _button2 == true && _button3 == true
         {
             _puzzleCorrect = true;
         }
