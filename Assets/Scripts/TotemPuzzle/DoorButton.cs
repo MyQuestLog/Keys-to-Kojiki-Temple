@@ -30,7 +30,16 @@ public class DoorButton : MonoBehaviour, IInteractable
         if (_button1 == true) //&& _button2 == true && _button3 == true
         {
             _puzzleCorrect = true;
+            Debug.Log("Puzzle correct true");
         }
+
+        if (_puzzleCorrect == true)
+        {
+            transform.position = new Vector3(200, 200, 200) * Time.deltaTime;
+            Debug.Log("Work");
+        }
+
+
 
         //Call StartRotation method inside of TotemRotation
         //door.GetComponent<TotemRotation>().StartRotation();

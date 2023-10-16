@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 0188d800c66cecf428b4ab6fc3c307aa
   - enabled: 1
-    path: Assets/To be deleted/From Scenes/Full Level.unity
-    guid: 857ab4ef9b4fc844ca557fb2b3c48d5b
+    path: Assets/Scenes/Demo Level.unity
+    guid: 877a1286988b5df489e96889cc6c8faa
   m_configObjects: {}
