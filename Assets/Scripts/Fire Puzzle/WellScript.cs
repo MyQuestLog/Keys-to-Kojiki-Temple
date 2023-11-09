@@ -5,25 +5,37 @@ using UnityEngine;
 
 public class WellScript : MonoBehaviour, IInteractable
 {
+    
+    public string InteractionPrompt => _prompt;
     [SerializeField] private string _prompt;
-    [SerializeField] GameObject Well;
 
     public static bool _hasWater;
     public static bool _wellCanvas;
-    public string InteractionPrompt => _prompt;
 
-   
+    [SerializeField] private GameObject _uiPanel1;
+    [SerializeField] private GameObject _uiPanel2;
+
+    [SerializeField] GameObject Well;
+
+
     void Start()
     {
         _wellCanvas = false;
         _hasWater = false;
+        _uiPanel2.SetActive(false);
+        
     }
 
     public void SwitchImages()
     {
-        Well.SetActive(false);
+        //Well.SetActive(false);
         _wellCanvas = true;
 
+        _hasTheBucket = false;
+        _hasWater = true;
+
+        _uiPanel1.SetActive(false);
+        _uiPanel2.SetActive(true);
     }
 
 
