@@ -62,7 +62,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_89FF9E58: {r: 1, g: 1, b: 1, a: 1}
+    - Color_89FF9E58: {r: 0.049706575, g: 0.32777813, b: 0.48514998, a: 1}
     - Vector2_65631586: {r: 0, g: 0.2, b: 0, a: 0}
     - Vector2_66765821: {r: 0, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

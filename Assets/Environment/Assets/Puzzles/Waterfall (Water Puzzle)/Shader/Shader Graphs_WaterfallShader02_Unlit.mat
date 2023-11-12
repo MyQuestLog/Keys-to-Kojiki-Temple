@@ -34,13 +34,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_53F4BD44: 3
+    - Vector1_53F4BD44: 18
     - Vector1_A13B78B8: 0
-    - Vector1_A60C21D6: 0.3
-    - Vector1_B72B5A5: 2
-    - Vector1_CA55BC4C: 7
+    - Vector1_A60C21D6: 6
+    - Vector1_B72B5A5: 18
+    - Vector1_CA55BC4C: 8
     - Vector1_FE1E5871: 0.6
-    - Vector1_FFBA46BC: 20
+    - Vector1_FFBA46BC: 25
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
