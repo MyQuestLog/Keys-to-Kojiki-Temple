@@ -57,7 +57,7 @@ public class TotemRotation : MonoBehaviour
     }
 
     //If object is not done rotating dont let the rotate be pressed again
-    IEnumerator Rotate(Vector3 axis, float angle, float duration = 2.0f)
+    IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
         Quaternion from = transform.rotation;
 
