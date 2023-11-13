@@ -7,11 +7,11 @@ using static Button2;
 using static Button3;
 using static Button4;
 
-public class DoorButton : MonoBehaviour, IInteractable
+public class FirstDoorButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
 
-    [HideInInspector] static public bool _puzzleCorrect;
+    [HideInInspector] static public bool _puzzleCorrect1;
 
     public string InteractionPrompt => _prompt;
 
@@ -21,25 +21,25 @@ public class DoorButton : MonoBehaviour, IInteractable
     //pls fix
     void Start()
     {
-        _puzzleCorrect = false;
+        _puzzleCorrect1 = false;
     }
 
 
     public bool Interact(Interactor interactor)
     {
         //Check if all faces are correct
-        if (_button1 == true && _button2 == true && _button3 == true && _button4)
+        if (_button1 == true)
         {
-            _puzzleCorrect = true;
+            _puzzleCorrect1 = true;
             Debug.Log("Puzzle correct true");
         }
 
-    /*if (_puzzleCorrect == true)
-    {
-       transform.position = new Vector3(200, 200, 200) * Time.deltaTime;
-        Debug.Log("Work");
-    }*/
-    
+        /*if (_puzzleCorrect == true)
+        {
+           transform.position = new Vector3(200, 200, 200) * Time.deltaTime;
+            Debug.Log("Work");
+        }*/
+
 
 
         //Call StartRotation method inside of TotemRotation

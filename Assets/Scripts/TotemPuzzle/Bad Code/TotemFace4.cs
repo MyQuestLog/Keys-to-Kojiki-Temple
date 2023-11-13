@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Button1;
+using static Button4;
 
-
-public class TotemFace1 : MonoBehaviour
+public class TotemFace4 : MonoBehaviour
 {
-
-    
-    
-
     //Sets if the object can rotate or not
     private bool _canRotate;
 
@@ -20,7 +15,7 @@ public class TotemFace1 : MonoBehaviour
     [SerializeField] private float _correctFace;
 
     //Send out number
-    [HideInInspector] public static bool _totemCorrect;
+    [HideInInspector] public static bool _totemCorrect4;
 
     [SerializeField] GameObject button;
 
@@ -41,6 +36,29 @@ public class TotemFace1 : MonoBehaviour
         }
     }
 
+    void EndRotation()
+    {
+
+        if (_currentFace > 4)
+        {
+            Debug.Log("Reset to starting location");
+            _currentFace = 1;
+        }
+
+        if (_currentFace == _correctFace)
+        {
+            _totemCorrect4 = true;
+            button.GetComponent<Button4>().SetVariable();
+
+
+        }
+        else if (_currentFace != _correctFace)
+        {
+            _totemCorrect4 = false;
+            button.GetComponent<Button4>().SetVariable();
+        }
+    }
+
     [SerializeField] GameObject _Camera1;
     [SerializeField] GameObject _Camera2;
     void Cam1()
@@ -54,43 +72,17 @@ public class TotemFace1 : MonoBehaviour
         _Camera1.SetActive(false);
         _Camera2.SetActive(true);
     }
-
-    void EndRotation()
-    {
-
-        if (_currentFace > 4)
-        {
-            Debug.Log("Reset to starting location");
-            _currentFace = 1;
-        }
-
-        if (_currentFace == _correctFace)
-        {
-            _totemCorrect = true;
-            button.GetComponent<Button1>().SetVariable();
-
-
-        }
-        else if (_currentFace != _correctFace)
-        {
-            _totemCorrect = false;
-            button.GetComponent<Button1>().SetVariable();
-        }
-    }
-
     public void StartRotation()
     {
         //Debug.Log("Start rotating object");
-        Cam2();
         _canRotate = true;
         _currentFace += 1;
+        Cam2();
     }
 
     //If object is not done rotating dont let the rotate be pressed again
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
-        
-
         Quaternion from = transform.rotation;
 
         Quaternion to = transform.rotation;

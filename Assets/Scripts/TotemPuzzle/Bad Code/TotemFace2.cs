@@ -60,8 +60,23 @@ public class TotemFace2 : MonoBehaviour
         }
     }
 
+    [SerializeField] GameObject _Camera1;
+    [SerializeField] GameObject _Camera2;
+    void Cam1()
+    {
+        _Camera1.SetActive(true);
+        _Camera2.SetActive(false);
+    }
+
+    void Cam2()
+    {
+        _Camera1.SetActive(false);
+        _Camera2.SetActive(true);
+    }
+
     public void StartRotation()
     {
+        Cam2();
         //Debug.Log("Start rotating object");
         _canRotate = true;
         _currentFace += 1;
@@ -91,7 +106,8 @@ public class TotemFace2 : MonoBehaviour
         transform.rotation = to;
         _canRotate = false;
         EndRotation();
-
+        Cam1();
+;
 
         //Debug.Log("Stop rotating object");
 
