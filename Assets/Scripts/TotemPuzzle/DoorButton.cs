@@ -5,6 +5,7 @@ using UnityEngine;
 using static Button1;
 using static Button2;
 using static Button3;
+using static Button4;
 
 public class DoorButton : MonoBehaviour, IInteractable
 {
@@ -27,7 +28,7 @@ public class DoorButton : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         //Check if all faces are correct
-        if (_button1 == true) //&& _button2 == true && _button3 == true
+        if (_button1 == true && _button2 == true && _button3 == true && _button4)
         {
             _puzzleCorrect = true;
             Debug.Log("Puzzle correct true");

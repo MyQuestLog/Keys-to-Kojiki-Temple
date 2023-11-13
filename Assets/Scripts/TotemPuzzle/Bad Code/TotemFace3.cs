@@ -59,11 +59,25 @@ public class TotemFace3 : MonoBehaviour
         }
     }
 
+    [SerializeField] GameObject _Camera1;
+    [SerializeField] GameObject _Camera2;
+    void Cam1()
+    {
+        _Camera1.SetActive(true);
+        _Camera2.SetActive(false);
+    }
+
+    void Cam2()
+    {
+        _Camera1.SetActive(false);
+        _Camera2.SetActive(true);
+    }
     public void StartRotation()
     {
         //Debug.Log("Start rotating object");
         _canRotate = true;
         _currentFace += 1;
+        Cam2();
     }
 
     //If object is not done rotating dont let the rotate be pressed again
@@ -90,6 +104,7 @@ public class TotemFace3 : MonoBehaviour
         transform.rotation = to;
         _canRotate = false;
         EndRotation();
+        Cam1();
 
 
         //Debug.Log("Stop rotating object");

@@ -17,5 +17,9 @@ public class DoorMovement : MonoBehaviour
             transform.position = new Vector3(0, 50, 0) * Time.deltaTime;
             Debug.Log("Work");
         }
+        else
+        {
+            Debug.Log("Puzzle Not Correct");
+        }
     }
 }

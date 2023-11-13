@@ -6,6 +6,10 @@ using static Button1;
 
 public class TotemFace1 : MonoBehaviour
 {
+
+    
+    
+
     //Sets if the object can rotate or not
     private bool _canRotate;
 
@@ -37,6 +41,20 @@ public class TotemFace1 : MonoBehaviour
         }
     }
 
+    [SerializeField] GameObject _Camera1;
+    [SerializeField] GameObject _Camera2;
+    void Cam1()
+    {
+        _Camera1.SetActive(true);
+        _Camera2.SetActive(false);
+    }
+
+    void Cam2()
+    {
+        _Camera1.SetActive(false);
+        _Camera2.SetActive(true);
+    }
+
     void EndRotation()
     {
 
@@ -63,6 +81,7 @@ public class TotemFace1 : MonoBehaviour
     public void StartRotation()
     {
         //Debug.Log("Start rotating object");
+        Cam2();
         _canRotate = true;
         _currentFace += 1;
     }
@@ -70,6 +89,8 @@ public class TotemFace1 : MonoBehaviour
     //If object is not done rotating dont let the rotate be pressed again
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
+        
+
         Quaternion from = transform.rotation;
 
         Quaternion to = transform.rotation;
@@ -91,6 +112,7 @@ public class TotemFace1 : MonoBehaviour
         transform.rotation = to;
         _canRotate = false;
         EndRotation();
+        Cam1();
 
 
         //Debug.Log("Stop rotating object");
