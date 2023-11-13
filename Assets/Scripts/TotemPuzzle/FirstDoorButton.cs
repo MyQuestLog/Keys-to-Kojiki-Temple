@@ -34,11 +34,11 @@ public class FirstDoorButton : MonoBehaviour, IInteractable
             Debug.Log("Puzzle correct true");
         }
 
-        /*if (_puzzleCorrect == true)
+        if (_puzzleCorrect1 == true)
         {
            transform.position = new Vector3(200, 200, 200) * Time.deltaTime;
             Debug.Log("Work");
-        }*/
+        }
 
 
 
